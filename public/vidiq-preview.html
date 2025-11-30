@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vista previa vidIQ estilo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0d1117;
+      --card: rgba(255,255,255,0.05);
+      --muted: #9fb3c8;
+      --accent: #7ce7ac;
+      --accent-2: #71b7ff;
+      --border: rgba(255,255,255,0.08);
+      --glow: 0 20px 60px rgba(124,231,172,0.15);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at 20% 20%, rgba(113,183,255,0.12), transparent 45%),
+                  radial-gradient(circle at 80% 0%, rgba(124,231,172,0.12), transparent 35%),
+                  var(--bg);
+      color: #e5ecf4;
+      min-height: 100vh;
+    }
+    header {
+      padding: 32px 24px 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .dot {
+      width: 12px; height: 12px; border-radius: 9999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: var(--glow);
+    }
+    .tag {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      padding: 16px 24px 32px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: 0 1px 0 rgba(255,255,255,0.05), var(--glow);
+    }
+    .card h3 {
+      margin: 0 0 6px;
+      font-size: 16px;
+    }
+    .muted { color: var(--muted); margin: 0 0 12px; font-size: 14px; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(113,183,255,0.08);
+      color: #d8eaff;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid rgba(113,183,255,0.18);
+      font-size: 13px;
+    }
+    .metrics { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+    .metric {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      padding: 10px 12px;
+      border-radius: 12px;
+      flex: 1;
+      min-width: 110px;
+    }
+    .metric strong { display: block; font-size: 18px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    .chip {
+      background: rgba(255,255,255,0.06);
+      border: 1px dashed var(--border);
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: #dfe8f5;
+      font-size: 13px;
+    }
+    .list { display: grid; gap: 10px; margin-top: 12px; }
+    .row {
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+    }
+    .row strong { display: block; margin-bottom: 4px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="title">
+      <div class="dot"></div>
+      <div>
+        <div class="tag">Vista previa</div>
+        <h1 style="margin:6px 0 0; font-size: 24px;">Panel vidIQ simulado</h1>
+        <p class="muted" style="margin:4px 0 0;">Experiencia estática para explorar el diseño sin dependencias ni build.</p>
+      </div>
+    </div>
+    <div style="display:flex; gap:8px; align-items:center;">
+      <span class="tag">/tools/vidiq</span>
+      <span class="tag">Demo offline</span>
+    </div>
+  </header>
+
+  <section class="grid">
+    <article class="card">
+      <h3>Resumen SEO</h3>
+      <p class="muted">Puntajes estimados con heurísticas locales.</p>
+      <div class="metrics">
+        <div class="metric"><span class="muted">CTR</span><strong>6.2%</strong><small class="muted"> promedio</small></div>
+        <div class="metric"><span class="muted">Retención</span><strong>58%</strong><small class="muted"> minuto 3</small></div>
+        <div class="metric"><span class="muted">SEO</span><strong>82</strong><small class="muted">/100</small></div>
+      </div>
+      <div class="chips">
+        <span class="pill">🔍 Nicho: Gaming estratégico</span>
+        <span class="pill">🔥 Idea: "Guía anti-meta 2025"</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <h3>Etiquetas recomendadas</h3>
+      <p class="muted">Generadas a partir del título y la descripción.</p>
+      <div class="chips">
+        <span class="chip">estrategia</span>
+        <span class="chip">tutorial pro</span>
+        <span class="chip">ranking 2025</span>
+        <span class="chip">mejores builds</span>
+        <span class="chip">cómo ganar</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <h3>Canal de referencia</h3>
+      <p class="muted">Rendimiento semanal simulado.</p>
+      <div class="row">
+        <strong>StreamFocus</strong>
+        <span class="muted">CTR 7.8% · SEO 85 · 12 videos/mes</span>
+      </div>
+      <div class="row">
+        <strong>Analítica rápida</strong>
+        <span class="muted">Títulos tipo pregunta superan el 10% de CTR</span>
+      </div>
+    </article>
+  </section>
+
+  <section class="grid">
+    <article class="card">
+      <h3>Ideas de video</h3>
+      <p class="muted">Temas con alta oportunidad en el nicho.</p>
+      <div class="list">
+        <div class="row">
+          <strong>"Errores que arruinan tu macro en 5 minutos"</strong>
+          <span class="muted">SEO 88 · Retención prevista 63%</span>
+        </div>
+        <div class="row">
+          <strong>"Probando estrategias de los top 100"</strong>
+          <span class="muted">SEO 80 · CTR potencial 7.2%</span>
+        </div>
+        <div class="row">
+          <strong>"Actualización de parches: qué cambió de verdad"</strong>
+          <span class="muted">SEO 76 · Ideal para shorts explicativos</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <h3>Videos populares del nicho</h3>
+      <p class="muted">Basado en engagement y consistencia.</p>
+      <div class="list">
+        <div class="row">
+          <strong>Top 10 builds imposibles</strong>
+          <span class="muted">CTR 8.4% · 1.3M vistas</span>
+        </div>
+        <div class="row">
+          <strong>Cómo subí a Gran Maestro en 14 días</strong>
+          <span class="muted">CTR 9.1% · 640K vistas</span>
+        </div>
+        <div class="row">
+          <strong>Counter picks que nadie usa</strong>
+          <span class="muted">CTR 6.7% · 420K vistas</span>
+        </div>
+      </div>
+    </article>
+  </section>
+</body>
+</html>

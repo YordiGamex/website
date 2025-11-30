@@ -86,3 +86,24 @@ client.command({
 ### 📄 Documentation
 
 [![aoijs/website](https://contrib.rocks/image?repo=aoijs/website)](https://github.com/aoijs/website)
+
+## 🏃‍♂️ Cómo ejecutar la web localmente
+
+Esta documentación está construida con [Astro](https://astro.build/) y Starlight, e incluye la página de analítica estilo vidIQ en `/tools/vidiq`.
+
+1. Instala Node 18+ y NPM.
+2. Descarga las dependencias (es normal ver avisos de _peer dependencies_ en este proyecto):
+   ```bash
+   npm install
+   ```
+   Si tu red devuelve un `403 Forbidden` al resolver `@astrojs/starlight`, configura el registro predeterminado y vuelve a intentar:
+   ```bash
+   npm config set registry https://registry.npmjs.org
+   npm install
+   ```
+   En entornos con políticas estrictas de dependencias, `npm install --legacy-peer-deps` puede ayudar a instalar a pesar de los avisos.
+3. Inicia el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+4. Abre [http://localhost:4321/tools/vidiq](http://localhost:4321/tools/vidiq) para ver el panel de analítica tipo vidIQ.
